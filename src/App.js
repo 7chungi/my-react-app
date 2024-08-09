@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { Route, Link, Routes } from 'react-router-dom';
 import { Bell, Home, CreditCard, Banknote, Menu } from 'lucide-react';
 
 const HomePage = () => (
@@ -101,15 +101,13 @@ const InvestmentPage = () => <PageTemplate title="투자" />;
 const StudyPage = () => <PageTemplate title="공부" />;
 
 const App = () => (
-  <Router>
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/travel" element={<TravelPage />} />
-      <Route path="/sns" element={<SNSPage />} />
-      <Route path="/investment" element={<InvestmentPage />} />
-      <Route path="/study" element={<StudyPage />} />
-    </Routes>
-  </Router>
+  <Routes>
+    <Route path="/" element={<HomePage />} />
+    <Route path="/travel" element={<TravelPage />} />
+    <Route path="/sns" element={<SNSPage />} />
+    <Route path="/investment" element={<InvestmentPage />} />
+    <Route path="/study" element={<StudyPage />} />
+  </Routes>
 );
 
 export default App;
